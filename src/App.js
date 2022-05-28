@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import UserBoard from "./Component/UserBoard";
+import Card from "./Component/Card";
+import "./style/main.css";
+import datas from "./static/data.json";
+import { useState } from "react";
 
 function App() {
+  const [timeFrame, setTimeFrame] = useState("weekly");
+
+  const getTimeFrame = (timeframe) => {
+    setTimeFrame(timeframe);
+  };
+
+  const cardGenerator = (datas) => {
+    let i = 0;
+    return datas.map((data) => {
+      i = i + 1;
+      return <Card dataCard={data} timeFrame={timeFrame} key={i} />;
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <UserBoard sendTimeFrame={getTimeFrame} />
+      {cardGenerator(datas)}
     </div>
   );
 }

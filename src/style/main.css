@@ -1,3 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 70%;
+  height: 60%;
+  display: grid;
+  grid-template: "header card card card" 1fr "header card card card" 1fr/1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+header {
+  background-color: gray;
+  grid-area: header;
+}
+
+.card {
+  background-color: lightpink;
+}
 
 /*# sourceMappingURL=main.css.map */
