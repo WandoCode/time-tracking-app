@@ -1,0 +1,31 @@
+.userBoard {
+  background-color: $c-n-card-bg;
+  height: 100%;
+  border-radius: $border-rad;
+
+  &__user {
+    height: 70%;
+    background-color: $c-p-user;
+    padding: $userboard-padding;
+    border-radius: $border-rad;
+
+    &__img {
+      height: 30%;
+      aspect-ratio: 1;
+      border: 3px solid $c-n-white;
+      border-radius: 110%;
+      background-color: white;
+    }
+  }
+
+  &__form {
+    padding: $userboard-padding;
+    display: flex;
+    flex-direction: column;
+
+    & input[type=radio] {
+      width: 0;
+      height: 0;
+    }
+  }
+}

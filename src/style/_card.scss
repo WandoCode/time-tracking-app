@@ -1,0 +1,33 @@
+.card {
+  border-radius: $border-rad;
+
+  &:nth-child(2) {
+    background-color: $c-p-work;
+  }
+
+  &:nth-child(3) {
+    background-color: $c-p-play;
+  }
+
+  &:nth-child(4) {
+    background-color: $c-p-study;
+  }
+
+  &:nth-child(5) {
+    background-color: $c-p-exercice;
+  }
+
+  &:nth-child(6) {
+    background-color: $c-p-social;
+  }
+
+  &:nth-child(7) {
+    background-color: $c-p-selfcare;
+  }
+
+  &__wrapper {
+    background-color: $c-n-card-bg;
+    border-radius: $border-rad;
+
+  }
+}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import avatar from "../static/pictures/image-jeremy.png";
 function UserBoard(props) {
   const [markChecked, setMarkChecked] = useState("weekly");
   const handleRadioInput = (e) => {
@@ -9,8 +9,15 @@ function UserBoard(props) {
   };
 
   return (
-    <header className="UserBoard">
-      <form action="">
+    <header className="userBoard">
+      <div className="userBoard__user">
+        <img src={avatar} alt="avatar" className="userBoard__user__img"/>
+        <div className="userBoard__user__title">
+          <h3>Report for</h3>
+          <h1 className="userBoard__user__title__name">Jeremy Robson</h1>
+        </div>
+      </div>
+      <form action="" className="userBoard__form">
         <label htmlFor="daily">
           Daily
           <input
