@@ -1,5 +1,17 @@
 .card {
+  position: relative;
   border-radius: $border-rad;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: clip;
+
+  & > img {
+    height: 5.5rem;
+    position: absolute;
+    top: -0.5rem;
+    right: 1.5rem;
+  }
 
   &:nth-child(2) {
     background-color: $c-p-work;
@@ -27,7 +39,31 @@
 
   &__wrapper {
     background-color: $c-n-card-bg;
+    padding: 1.8rem;
     border-radius: $border-rad;
+    flex-basis: 82%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
 
+    &__upper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__currentHours {
+      font-size: 4rem;
+      color: $c-n-white;
+      font-weight: 200;
+      margin-top: 1rem;
+    }
+
+    &__previousHours {
+      color: $c-n-D;
+    }
   }
 }

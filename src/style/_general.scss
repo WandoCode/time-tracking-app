@@ -15,14 +15,14 @@ body {
 
 
 .container {
-  width: 70%;
-  height: 60%;
+  width: 62%;
+  height: 57%;
   display: grid;
   grid-template:
   "header card card card" 1fr
   "header card card card" 1fr
   / 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 }
 
 header {
@@ -31,17 +31,32 @@ header {
 
 h1 {
   color: $c-n-white;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 300;
+  display: inline-block;
 }
 
 .h2 {
   color: $c-n-white;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 h3 {
   color: $c-n-D;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.label {
+  font-size: 1.1rem;
+
+  &--active {
+    color: $c-n-white;
+  }
+
+  &:hover {
+    color: $c-n-white;
+  }
 }
 
