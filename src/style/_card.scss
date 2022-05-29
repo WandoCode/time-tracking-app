@@ -47,12 +47,25 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten($c-n-card-bg, 15%);
+    }
 
     &__upper {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
+
+      & > img {
+        cursor: pointer;
+
+        &:hover {
+          filter: sepia(60%) saturate(100%) hue-rotate(210deg);
+        }
+      }
     }
 
     &__currentHours {

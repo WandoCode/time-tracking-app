@@ -53,6 +53,8 @@ h3 {
 
 .label {
   font-size: 1.1rem;
+  cursor: pointer;
+  width: min-content;
 }
 .label--active {
   color: hsl(0deg, 0%, 100%);
@@ -144,12 +146,22 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  cursor: pointer;
+}
+.card__wrapper:hover {
+  background-color: #303782;
 }
 .card__wrapper__upper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+.card__wrapper__upper > img {
+  cursor: pointer;
+}
+.card__wrapper__upper > img:hover {
+  filter: sepia(60%) saturate(100%) hue-rotate(210deg);
 }
 .card__wrapper__currentHours {
   font-size: 4rem;
