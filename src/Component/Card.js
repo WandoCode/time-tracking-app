@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import work from "../static/pictures/icon-work.svg";
 import play from "../static/pictures/icon-play.svg";
 import study from "../static/pictures/icon-study.svg";

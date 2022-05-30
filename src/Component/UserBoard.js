@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import avatar from "../static/pictures/image-jeremy.png";
 
 function UserBoard(props) {
