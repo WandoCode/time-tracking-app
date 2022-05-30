@@ -19,7 +19,7 @@ function UserBoard(props) {
           <h1 className="userBoard__user__title__name">Jeremy Robson</h1>
         </div>
       </div>
-      <form action="" className="userBoard__form">
+      <form className="userBoard__form">
         <label
           htmlFor="daily"
           className={markChecked === "daily" ? "label label--active" : "label"}
