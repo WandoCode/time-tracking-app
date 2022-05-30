@@ -18,3 +18,9 @@ $c-n-white: hsl(0, 0%, 100%);
 
 $userboard-padding: 2rem;
 $border-rad: 1rem;
+
+@mixin breakpoint-sm {
+  @media (min-width: 1000px) {
+    @content
+  }
+}

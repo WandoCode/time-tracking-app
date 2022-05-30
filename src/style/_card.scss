@@ -1,63 +1,81 @@
 .card {
   position: relative;
-  border-radius: $border-rad;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-top: 1.6em;
   overflow: clip;
+  border-radius: $border-rad;
 
-  & > img {
-    height: 5.5rem;
-    position: absolute;
-    top: -0.5rem;
-    right: 1.5rem;
+  @include breakpoint-sm {
+    height: unset;
+    min-height: 30%;
+    flex-basis: 30%;
+    flex-grow: 1;
+    margin: 0;
+
   }
 
-  &:nth-child(2) {
+  & > img {
+    height: 40%;
+    position: absolute;
+    top: -0.5rem;
+    right: 1.5em;
+  }
+
+  &:nth-child(1) {
     background-color: $c-p-work;
   }
 
-  &:nth-child(3) {
+  &:nth-child(2) {
     background-color: $c-p-play;
   }
 
-  &:nth-child(4) {
+  &:nth-child(3) {
     background-color: $c-p-study;
   }
 
-  &:nth-child(5) {
+  &:nth-child(4) {
     background-color: $c-p-exercice;
   }
 
-  &:nth-child(6) {
+  &:nth-child(5) {
     background-color: $c-p-social;
   }
 
-  &:nth-child(7) {
+  &:nth-child(6) {
     background-color: $c-p-selfcare;
   }
 
   &__wrapper {
-    background-color: $c-n-card-bg;
-    padding: 1.8rem;
-    border-radius: $border-rad;
-    flex-basis: 82%;
-    z-index: 1;
+    height: 77%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.8rem;
+    background-color: $c-n-card-bg;
+    border-radius: $border-rad;
+    z-index: 1;
     cursor: pointer;
+
+    @include breakpoint-sm {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
 
     &:hover {
       background-color: lighten($c-n-card-bg, 15%);
     }
 
     &__upper {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
+      flex-grow: 2;
 
       & > img {
         cursor: pointer;
@@ -69,14 +87,17 @@
     }
 
     &__currentHours {
-      font-size: 4rem;
+      font-size: 2em;
       color: $c-n-white;
-      font-weight: 200;
-      margin-top: 1rem;
+      font-weight: lighter;
     }
 
     &__previousHours {
+      font-size: 0.95em;
+      font-weight: lighter;
       color: $c-n-D;
+      align-self: flex-start;
+      margin-top: 0.7em;
     }
   }
 }

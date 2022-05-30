@@ -1,57 +1,69 @@
 body {
-  height: 100vh;
-  font-family: $font;
   color: $c-n-typo;
+  font-family: $font;
+  background-color: $c-n-main-bg;
+  @include breakpoint-sm {
+    height: 100vh;
+  }
 }
 
 #root {
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: $c-n-main-bg;
-  width: 100%;
+  align-items: center;
   height: 100%;
 }
 
 
 .container {
-  width: 62%;
-  height: 57%;
-  display: grid;
-  grid-template:
-  "header card card card" 1fr
-  "header card card card" 1fr
-  / 1fr 1fr 1fr 1fr;
-  grid-gap: 2rem;
+  width: 90%;
+  margin: 15vh 0;
+
+  @include breakpoint-sm {
+    width: 70%;
+    height: 60%;
+    display: flex;
+    margin: 0;
+  }
 }
 
-header {
-  grid-area: header;
+.cards {
+  @include breakpoint-sm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+    flex-basis: 75%;
+    gap: 2rem;
+  }
 }
 
 h1 {
   color: $c-n-white;
-  font-size: 2.8rem;
+  font-size: 1.5em;
   font-weight: 300;
-  display: inline-block;
+  @include breakpoint-sm {
+    font-size: 3em;
+  }
 }
 
 .h2 {
   color: $c-n-white;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-h3 {
-  color: $c-n-D;
-  font-size: 1rem;
+  font-size: 1.15em;
   font-weight: 400;
 }
 
+h3 {
+  font-size: 0.95em;
+  font-weight: 400;
+  color: $c-n-D;
+  margin-bottom: 0.3em;
+}
+
 .label {
-  font-size: 1.1rem;
+  font-size: 0.8em;
   cursor: pointer;
-  width: min-content;
+
   &--active {
     color: $c-n-white;
   }

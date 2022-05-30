@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="container">
       <UserBoard sendTimeFrame={getTimeFrame} />
-      {cardGenerator(datas)}
+      <div className="cards">{cardGenerator(datas)}</div>
     </div>
   );
 }
