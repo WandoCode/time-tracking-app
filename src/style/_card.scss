@@ -7,6 +7,11 @@
   margin-top: 1.6em;
   overflow: clip;
   border-radius: $border-rad;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.01);
+  }
 
   @include breakpoint-sm {
     height: unset;
@@ -90,6 +95,9 @@
       font-size: 2em;
       color: $c-n-white;
       font-weight: lighter;
+      @include breakpoint-sm {
+        font-size: 3em;
+      }
     }
 
     &__previousHours {
